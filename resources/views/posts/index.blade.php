@@ -25,7 +25,7 @@
                                     <td>{{ $post->title }}</td>
                                     <td>{{ $post->created_at }}</td>
                                     <td>
-                                        <a href="{{ route('posts.show', $post) }}">Show</a>
+                                        <a href="{{ route('posts.show', [$post->id, $post->slug]) }}">Show</a>
                                         <a href="{{ route('posts.edit', $post) }}">Edit</a>
                                         <form action="{{ route('posts.destroy', $post) }}" method="POST">
                                             @csrf
